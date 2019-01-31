@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html style="box-sizing:border-box;">
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 
+	<style type="text/css">
+		body {font-family: Arial, Helvetica, sans-serif; width:100%;}
+
+
+		.navbar {
+			height:40px;
+		  width: 100%;
+		  background-color: #000;
+		  overflow: auto;
+		}
+
+		.navbar a {
+		  float: left;
+		  margin-left:25px;
+		  margin-right:25px;
+		  /*padding: 6px;*/
+		  padding-right:0;
+		  padding-left:0;
+		  color: white;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		.navbar a:hover {
+		  background-color: #fff;
+		  color:darkred;
+		  border-radius:4px;
+		}
+
+		.active {
+		  background-color: #000;
+		}
+
+		@media screen and (max-width: 500px) {
+		  .navbar a {
+		  	padding-left: 90px;
+		    float: none;
+		    display: block;
+
+		  }
+		}
+		.logo a h1:hover{
+			text-decoration:none;
+		}
+		.responsive {
+	  		width: 100%;
+	  		height: auto;
+		}
+
+		.container {
+		  position: relative;
+		  width:300px;
+		}
+
+		.image {
+		  opacity: 1;
+		  display: block;
+		  width: 230px;
+		  height: 230px;
+		  transition: .5s ease;
+		  backface-visibility: hidden;
+		  border-radius:50%;
+		  border:solid 5px maroon;
+		}
+
+		.middle {
+		  transition: .5s ease;
+		  opacity: 0;
+		  position: absolute;
+		  top: 140px;
+		  left: 130px;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  text-align: center;
+		}
+
+		.container:hover .image {
+		  opacity: 0.3;
+		}
+
+		.container:hover .middle {
+		  opacity: 1;
+		}
+
+		.cover{
+		 position: relative;
+		 opacity: 1;
+		 display: block;
+		 transition: .5s ease;
+		 backface-visibility: hidden;	
+		}
+		.bottom{
+		  transition: .5s ease;
+		  opacity: 0;
+		  position: absolute;
+		  top: 470px;
+		  left: 90%;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  text-align: center;
+		}
+		.background:hover .cover {
+		  opacity: 0.4;
+		}
+
+		.background:hover .bottom {
+		  opacity: 1;
+		}
+
+		@media screen and (max-width: 500px){
+		.logo{
+			width:50%;
+			height:200px;
+		}
+		.logo h1{
+			font-size:35px;
+					}
+		.logo button{
+			float:none;
+			margin-top:10px;
+		}	
+		}
+		.col .fa {
+		  padding: 5px;
+		  font-size: 15px;
+		  width: 30px;
+		  text-align: center;
+		  text-decoration: none;
+		  margin: 5px 2px;
+		  border-radius: 50%;
+		}
+
+		.col .fa:hover {
+		    opacity: 0.2;
+        }
+		.fa-facebook {
+		  background: #d11022;
+		  color: white;
+		}
+
+		.fa-twitter {
+		  background:#d11022;
+		  color: white;
+		}
+
+		.fa-google {
+		  background: #d11022;
+		  color: white;
+		}
+		.fa-youtube {
+		  background: #d11022;
+		  color: white;
+		}
+		.fa-instagram {
+		  background: #d11022;
+		  color: white;
+		}
+		.btn-primary: hover{
+			background-color: #11b267;
+		}
+		.content .fa {
+		  font-size: 50px;
+		  cursor: pointer;
+		  user-select: none;
+		}
+
+		.content i.fa :hover {
+		  color: blue;
+		}
+		
+		@media screen and (max-width: 500px){
+			.logo p{
+				font-size:10px;
+				
+			}
+			
+			.background .cover{
+				height:100px;
+			}
+			.container{
+				height:100px;
+				width:100px;
+			}
+			.container .image{
+				height:150px;
+				width:150px;
+				margin-top:100px;
+
+			}
+			.container .middle {
+				height:50px;
+				size: 50px;
+				width:60px;
+				font-size:10px;
+				left:30px;
+			}
+		}
+
+
+   </style>
+		
+</head>
+<body style="width:100%;font-family:Georgia,Courier New;">
+	<!--HEADER BEGIN-->
+	<div class="logo" style="margin-top:-20px;height:60px;width:100%;background-image:linear-gradient(to bottom,#af0e1d,#FC938D);">
+		<h1 style="cursor:default;margin-left:20px;padding-top: 15px;font-weight:bold; font-size:30px;text-decoration:none; color:white;">Music Sensation</h1>
+		<button style="height:40px;width:100px;border-radius:8px;font-size:20px;border:solid 3px #C95955;
+		background-color:#FC736B;color:white;font-weight:normal;float:right;margin-top:-45px;margin-right:60px;cursor:pointer;">Logout</button>
+	</div>
+	<!--HEADER ENDS-->
+	<!--NAVBAR BEGIN-->
+	<div class="navbar" style="width:100%;">
+		<div class="links" style="width:75%;margin-left:-250px;">
+		  <a class="active" href="index.html" style="margin-left:-10px;"><i class="fa fa-fw fa-home"></i> Feed</a> 
+		  <a class="active"href="#notification.html" style="margin-left:-10px;"><i class="fa fa-fw fa-globe"></i> Notification</a> 
+		  <a class="active"href="#chatting.html" style="margin-left:-10px;"><i class="fa fa-fw fa-envelope"></i> Chatting</a> 
+		</div>
+	</div>
+	<!--NAVBAR ENDS-->
+
+	<div class="responsive" style="margin-left:auto;margin-right:auto;">
+		<!--COVER PHOTO BEGIN-->
+		<div class="background">
+			<img src="backgnd.jpg" class="cover"style="margin-top:-20px;height:400px;width:100%;z-index:0;position: relative;">
+			<div class="bottom">
+				<button style="height:55px;width:180px;border-radius:15px;padding:2px;box-shadow:3px 3px rgba(124, 123, 123,0.3);cursor: pointer;font-size:15px;font-weight:bold;background-color:lightgray;">Change Cover Photo</button>
+			</div>
+		</div>
+		<!--COVER PHOTO ENDS-->
+		<!--DISPLAY IMAGE BEGIN-->
+		<div class="container" style="margin-left:85px;margin-top:-120px;z-index: 100;">
+		  <img  src="profile.png" alt="Avatar" class="image"  >
+		  <div class="middle">
+		    <button  style="height:55px;width:180px;border-radius:15px;padding:2px;box-shadow:3px 3px rgba(124, 123, 123,0.3);font-size:15px;cursor: pointer;
+		    font-weight:bold;">Change Display Photo</button>
+		  </div>
+		 <!--DISPLAY IMAGE ENDS-->
+		</div>
+		<!--USER DETAILS BEGINS-->
+		<h1 style="margin-top:-110px; font-size:30px;margin-left:360px;font-style:italic;font-weight:bold;text-align: left;">Divneet Garg</h1>
+		
+		<div class="col col-sm-3" style="margin-left:320px;background-image:linear-gradient(to bottom;#c2efc8;white);position:relative;z-index:0;padding-left:-25px;">
+			<ul style="list-style: none;text-align: left;font-size:20px;position:absolute;z-index:100;">
+				<li>I’m tuning you out and turning up my music...</li>
+				<li>Belongs to Meerut</li>
+				<li>Follow me @:</li>
+				<li><a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-google"></a>
+					<a href="#" class="fa fa-youtube"></a>
+					<a href="#" class="fa fa-instagram"></a>
+				</li>
+			</ul>
+		</div>
+		<!--USER DETAILS ENDS-->
+		<!--EDIT PROFILE MODAL-->
+		<div class="col col-sm-2" style="margin-right:20px;margin-left:1000px;margin-top:-40px;">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="height:50px;width:180px;border-radius:7px;font-style:italic;box-shadow:2px 3px rgba(226, 18, 37,0.3);background-color:darkred;color:white;text-align: center;font-size:25px;">Edit Profile</button>
+			<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-xl" style="opacity:0.8;">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-weight:bold;font-size:40px;">Edit Profile</h4>
+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <label name="name" style="font-size: 20px; color:gray;">Name</label>
+          <input type="text" style="width:100%;border-top:none; border-left:none;border-right:none;border-bottom:solid 1px black;margin-top:0;padding-top:0px;">
+		  <label name="name" style="font-size: 20px; color:gray;margin-top:15px;">Username</label>
+          <input type="text" style="width:100%;border-top:none; border-left:none;border-right:none;border-bottom:solid 1px black;padding-top:0px;margin-top: 0;">
+          <label name="name" style="font-size: 20px; color:gray;margin-top:15px;">Status</label>
+          <input type="text" style="width:100%;border-top:none; border-left:none;border-right:none;border-bottom:solid 1px black;padding-top:0px;margin-top: 0;">
+          <label name="name" style="font-size: 20px; color:gray;margin-top:15px;">Location</label>
+          <input type="text" style="width:100%;border-top:none; border-left:none;border-right:none;border-bottom:solid 1px black;padding-top:0px;margin-top: 0;">
+          <label name="name" style="font-size: 20px; color:gray;margin-top:15px;">Other contacts</label>
+          <input type="text" style="width:100%;border-top:none; border-left:none;border-right:none;border-bottom:solid 1px black;padding-top:0px;margin-top: 0;">
+          <label name="name" style="font-size: 20px;font-weight:bold; color:black;margin-top: 30px;">Private Information</label><br>
+          <label name="name" style="font-size: 20px; color:gray;margin-top: 15px;">Email address</label>
+          <input type="email" placeholder="name@domain.com" style="width:100%;border-top:none;color:darkgray; border-left:none;border-right:none;border-bottom:solid 1px black;padding-top:0px;margin-top: 0;">
+	      <form action="/action_page.php">
+	      	<label name="name" style="width:100%;font-size: 20px; color:gray;margin-top: 15px;">Birth Date</label>
+			<input type="date" name="bday" style="width:30%;border-top:none;color:darkgray; border-left:none;border-right:none;border-bottom:solid 1px black;padding-top:0px;margin-top: 0;">
+	  	</form>
+	      <label name="name" style="font-size: 20px; color:gray;;margin-top: 15px;">Phone number</label>
+          <input type="text" style="width:100%;border-top:none; border-left:none;border-right:none;border-bottom:solid 1px black;padding-top:0px;">
+          <label name="name" style="font-size: 20px; color:gray;width:100%;;margin-top: 15px;">Gender</label>
+          <input type="text" style="width:25%;border-top:none; border-left:none;border-right:none;border-bottom:solid 1px black;padding-top:0px;">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background-color:white;color:black;height:3px;width:3px;border:none;">
+    		</button>
+          <div class="dropdown-menu">
+          	<ul style="list-style: none;">
+          		<li><input type="radio" name="gender">Male</li>
+			     <li><input type="radio" name="gender">Female</li>
+			     <li><input type="radio" name="gender">Not specified</li>
+			</ul>	      
+	      </div>
+		 <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+		</div>
+	</div>
+</div>
+<div class="content" style="margin-right: auto;margin-left: auto;width:45%;margin-top:200px;">
+	<!--post 1-->
+	<img src="profile.png"  style="height:50px;width:50px;border-radius:50%;margin-right:10px;">
+	<h1 style="margin-left:60px;margin-top:-40px;font-size:25px;"><strong>Divneet Garg</strong></h1>
+	<aside style="font-size:20px;margin-left:30px;font-style:italic;">Check out my new video...</aside><br>
+	 <iframe width="600" height="420" src="https://www.youtube.com/embed/dZ30IAwnJuE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+	<i onclick="myFunction(this)" class="fa fa-thumbs-up" style="margin-left: 15px;font-size:40px;"></i>
+	<button class="btn btn-info btn-lg" style="height:40px;width:40px;margin-top:-10px;font-size:20px;text-align:center;border-radius:50%;padding:10px;
+	background-color:red;">
+          <span class="glyphicon glyphicon-heart"></span>  
+        </button>
+    <div class="posted" style="float:right;margin-top:5px;font-size:20px;margin-right:20px;color:darkgray;"><i><medium>29 Januray 2019</medium></i></div>
+	<br>
+	<img src="profile.png"  style="height:30px;width:30px;border-radius:50%;margin-left:10px;margin-right:10px;margin-top:10px;">
+	<input type"text area" placeholder="Write your comment" style="border-radius: 4px;width:75%;">
+	<button style="border-radius: 5px;height:30px;width:80px;background-color:maroon;color:white;font-size:20px;box-shadow:2px 2px #C95955;float:right;margin-left:100px;margin-top:-40px;align-content: center;">Post</button>
+
+	<script>
+	function myFunction(x) {
+	  x.classList.toggle("fa-thumbs-down");
+	}
+	</script>
+	<!--post 1 ends-->
+	<!--post 2-->
+	<div class="post2" style="margin-top: 30px;">
+	<img src="profile.png"  style="height:50px;width:50px;border-radius:50%;margin-right:10px;">
+	<h1 style="margin-left:60px;margin-top:-40px;font-size:30px;">Divyanshu Garg</h1>
+	<aside style="font-size:20px;margin-left:20px;font-style:italic;">She just nailed it... </aside><br>
+	 <iframe width="600" height="420" src="https://www.youtube.com/embed/9ybhPQyJS8k?list=PL53E0A041C1930799" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<i onclick="myFunction(this)" class="fa fa-thumbs-up" style="margin-left: 15px;font-size:40px;"></i>
+	<button class="btn btn-info btn-lg" style="height:40px;width:40px;margin-top:-10px;font-size:20px;text-align:center;border-radius:50%;padding:10px;background-color:red;">
+          <span class="glyphicon glyphicon-heart"></span>  
+        </button>
+    <div class="posted" style="float:right;margin-top:5px;font-size:20px;margin-right:20px;color:darkgray;"><i><medium>16 Januray 2019</medium></i></div>
+	<br>
+	<img src="profile.png"  style="height:30px;width:30px;border-radius:50%;margin-left:10px;margin-right:10px;margin-top:10px;">
+	<input type"text area" placeholder="Write your comment" style="border-radius: 4px;width:75%;">
+	<button style="border-radius: 5px;height:30px;width:80px;background-color:maroon;color:white;font-size:20px;box-shadow:2px 2px #C95955;float:right;margin-left:100px;margin-top:-40px;align-content: center;">Post</button>
+</div>
+	<script>
+	function myFunction(x) {
+	  x.classList.toggle("fa-thumbs-down");
+	}
+	</script>
+	<!--post 2 ends-->
+</div>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
